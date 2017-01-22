@@ -13,9 +13,10 @@ public class UserDTO implements Serializable{
 	private String userId;
 	private String name;
 	private Date createdDate;
-	private Date updateDate;
+	private Date lastLoginDate;
 	private String email;
 	private String password;
+	private String mobile;
 	
 	/**
 	 * @return the password
@@ -43,11 +44,11 @@ public class UserDTO implements Serializable{
 		this.userId = userId;
 	}
 	@JsonSerialize(using=DateSerializer.class)
-	public Date getUpdateDate() {
-		return updateDate;
+	public Date getLastLoginDate() {
+		return lastLoginDate;
 	}
-	public void setUpdateDate(Date updateDate) {
-		this.updateDate = updateDate;
+	public void setLastLoginDate(Date lastLoginDate) {
+		this.lastLoginDate = lastLoginDate;
 	}
 	public String getEmail() {
 		return email;
@@ -61,6 +62,18 @@ public class UserDTO implements Serializable{
 	}
 	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
+	}
+	/**
+	 * @return the mobile
+	 */
+	public String getMobile() {
+		return mobile;
+	}
+	/**
+	 * @param mobile the mobile to set
+	 */
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
 	}
 	
 

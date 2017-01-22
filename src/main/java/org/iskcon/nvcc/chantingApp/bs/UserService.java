@@ -13,4 +13,6 @@ public interface UserService {
 
 	
 	public UserDTO registerUser(UserDTO userDto);
+	
+	public UserDTO loginUser(UserDTO userDto);
 }

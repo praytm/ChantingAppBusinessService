@@ -59,10 +59,11 @@ public class UserDTO implements Serializable{
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	@JsonSerialize(using=DateSerializer.class)
+	@JsonSerialize(using=JsonDateSerializer.class)
 	public Date getCreatedDate() {
 		return createdDate;
 	}
+	@JsonDeserialize(using = JsonDateDeserializer.class, as = Date.class)
 	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
 	}

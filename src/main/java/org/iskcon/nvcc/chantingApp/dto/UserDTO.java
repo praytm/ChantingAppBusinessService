@@ -3,7 +3,9 @@ package org.iskcon.nvcc.chantingApp.dto;
 import java.io.Serializable;
 import java.util.Date;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.deser.std.DateDeserializers.DateDeserializer;
 import com.fasterxml.jackson.databind.ser.std.DateSerializer;
 
 public class UserDTO implements Serializable{
@@ -43,10 +45,11 @@ public class UserDTO implements Serializable{
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	@JsonSerialize(using=DateSerializer.class)
+	@JsonSerialize(using=JsonDateSerializer.class)
 	public Date getLastLoginDate() {
 		return lastLoginDate;
 	}
+	@JsonDeserialize(using = JsonDateDeserializer.class, as = Date.class)
 	public void setLastLoginDate(Date lastLoginDate) {
 		this.lastLoginDate = lastLoginDate;
 	}

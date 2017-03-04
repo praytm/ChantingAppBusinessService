@@ -3,7 +3,9 @@
  */
 package org.iskcon.nvcc.chantingApp.bs;
 
+import org.iskcon.nvcc.chantingApp.dto.ChantingHistoryDTO;
 import org.iskcon.nvcc.chantingApp.dto.ChantingSessionDTO;
+import org.iskcon.nvcc.chantingApp.dto.GetChantingHistoryRequestDTO;
 import org.iskcon.nvcc.chantingApp.dto.RefreshUserStatisticsOutputDTO;
 import org.iskcon.nvcc.chantingApp.dto.UserDTO;
 
@@ -25,4 +27,6 @@ public interface UserService {
 	public RefreshUserStatisticsOutputDTO refreshUserStatistics(UserDTO userDto);
 	
 	public Boolean saveNewChantingSession(ChantingSessionDTO chantingSessionDto);
+	
+	public ChantingHistoryDTO getChantingHistoryForUser(GetChantingHistoryRequestDTO  getChantingHistoryRequestDTO);
 }

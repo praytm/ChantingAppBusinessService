@@ -3,6 +3,7 @@
  */
 package org.iskcon.nvcc.chantingApp.bs;
 
+import org.iskcon.nvcc.chantingApp.dto.ChantingSessionDTO;
 import org.iskcon.nvcc.chantingApp.dto.RefreshUserStatisticsOutputDTO;
 import org.iskcon.nvcc.chantingApp.dto.UserDTO;
 
@@ -22,4 +23,6 @@ public interface UserService {
 	public Boolean changeUserStatusToNotActive(UserDTO userDto);
 	
 	public RefreshUserStatisticsOutputDTO refreshUserStatistics(UserDTO userDto);
+	
+	public Boolean saveNewChantingSession(ChantingSessionDTO chantingSessionDto);
 }

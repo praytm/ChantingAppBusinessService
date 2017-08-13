@@ -5,8 +5,6 @@ import java.util.Date;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.databind.deser.std.DateDeserializers.DateDeserializer;
-import com.fasterxml.jackson.databind.ser.std.DateSerializer;
 
 public class UserDTO implements Serializable{
 
@@ -19,6 +17,8 @@ public class UserDTO implements Serializable{
 	private String email;
 	private String password;
 	private String mobile;
+	private Boolean isRegisteredViaGoogle;
+	private String googleAuthToken;
 	
 	/**
 	 * @return the password
@@ -78,6 +78,30 @@ public class UserDTO implements Serializable{
 	 */
 	public void setMobile(String mobile) {
 		this.mobile = mobile;
+	}
+	/**
+	 * @return the isRegisteredViaGoogle
+	 */
+	public Boolean getIsRegisteredViaGoogle() {
+		return isRegisteredViaGoogle;
+	}
+	/**
+	 * @param isRegisteredViaGoogle the isRegisteredViaGoogle to set
+	 */
+	public void setIsRegisteredViaGoogle(Boolean isRegisteredViaGoogle) {
+		this.isRegisteredViaGoogle = isRegisteredViaGoogle;
+	}
+	/**
+	 * @return the googleAuthToken
+	 */
+	public String getGoogleAuthToken() {
+		return googleAuthToken;
+	}
+	/**
+	 * @param googleAuthToken the googleAuthToken to set
+	 */
+	public void setGoogleAuthToken(String googleAuthToken) {
+		this.googleAuthToken = googleAuthToken;
 	}
 	
 

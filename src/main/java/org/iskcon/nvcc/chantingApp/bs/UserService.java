@@ -29,4 +29,6 @@ public interface UserService {
 	public Boolean saveNewChantingSession(ChantingSessionDTO chantingSessionDto);
 	
 	public ChantingHistoryDTO getChantingHistoryForUser(GetChantingHistoryRequestDTO  getChantingHistoryRequestDTO);
+	
+	public Integer getTotalNumberOfBeadsForToday();
 }

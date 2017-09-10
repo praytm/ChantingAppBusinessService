@@ -31,4 +31,6 @@ public interface UserService {
 	public ChantingHistoryDTO getChantingHistoryForUser(GetChantingHistoryRequestDTO  getChantingHistoryRequestDTO);
 	
 	public Integer getTotalNumberOfBeadsForToday();
+	
+	public String getValueFromMasterData(String key);
 }

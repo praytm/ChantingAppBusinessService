@@ -18,6 +18,7 @@ public class UserDTO implements Serializable{
 	private String password;
 	private String mobile;
 	private Boolean isRegisteredViaGoogle;
+	private String profilepic;
 	private String googleAuthToken;
 	
 	/**
@@ -90,6 +91,13 @@ public class UserDTO implements Serializable{
 	 */
 	public void setIsRegisteredViaGoogle(Boolean isRegisteredViaGoogle) {
 		this.isRegisteredViaGoogle = isRegisteredViaGoogle;
+	}
+	
+	public String getProfilepic() {
+		return profilepic;
+	}
+	public void setProfilepic(String profilepic) {
+		this.profilepic = profilepic;
 	}
 	/**
 	 * @return the googleAuthToken

@@ -6,6 +6,7 @@ package org.iskcon.nvcc.chantingApp.bs;
 import org.iskcon.nvcc.chantingApp.dto.ChantingHistoryDTO;
 import org.iskcon.nvcc.chantingApp.dto.ChantingSessionDTO;
 import org.iskcon.nvcc.chantingApp.dto.GetChantingHistoryRequestDTO;
+import org.iskcon.nvcc.chantingApp.dto.HighestChantingInfoDTO;
 import org.iskcon.nvcc.chantingApp.dto.RefreshUserStatisticsOutputDTO;
 import org.iskcon.nvcc.chantingApp.dto.UserDTO;
 
@@ -33,4 +34,6 @@ public interface UserService {
 	public Integer getTotalNumberOfBeadsForToday();
 	
 	public String getValueFromMasterData(String key);
+	
+	public HighestChantingInfoDTO getHighestChanting();
 }
